@@ -1,0 +1,136 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Montserrat-Regular.svg#Montserrat-Regular') format('svg'),
+         url('../fonts/Montserrat-Regular.ttf') format('truetype'),
+         url('../fonts/Montserrat-Regular.woff') format('woff'),
+         url('../fonts/Montserrat-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Montserrat-Medium.svg#Montserrat-Medium') format('svg'),
+         url('../fonts/Montserrat-Medium.ttf') format('truetype'),
+         url('../fonts/Montserrat-Medium.woff') format('woff'),
+         url('../fonts/Montserrat-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Bold.svg#Montserrat-Bold') format('svg'),
+         url('../fonts/Montserrat-Bold.ttf') format('truetype'),
+         url('../fonts/Montserrat-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat_bold.eot');
+    src: url('../fonts/montserrat_bold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/montserrat_bold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+  }
+  *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+  img{
+      max-width: 100%;
+  }
+  .container{
+      max-width: 1128px;
+      margin: auto;
+      position: relative;
+  }
+
+  /* ------------------------media 1360------------------------ */
+
+  @media (max-width: 1386px){
+    .why_we{
+        margin-bottom: -20px;
+    }
+  }
+
+  /* ------------------------media 1169------------------------ */
+
+  @media (max-width: 1169px){
+    .container{
+        max-width: 90%;
+    }
+}
+
+/* ---------------------------media 1117------------------------- */
+@media (max-width: 1117px){
+  .burger-menu_button{
+    position: fixed;
+    top: -10px;
+    right: 10px;
+    z-index: 30;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .burger-menu_button:hover .burger-menu_lines{
+    filter: brightness(0.7);
+  }
+  
+  .burger-menu_lines,
+  .burger-menu_lines::after,
+  .burger-menu_lines::before {
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background-color: rgba(255, 184, 0, 1);
+  }
+  .burger-menu_lines{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .burger-menu_lines::before{
+    content: '';
+    top: -12px;
+  }
+  .burger-menu_lines::after{
+    content: '';
+    top: 12px;
+  }
+.burger-menu_active .burger-menu_lines{
+  background-color: transparent;
+}
+.burger-menu_active .burger-menu_lines::before{
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger-menu_active .burger-menu_lines::after{
+  top: 0;
+  transform: rotate(-45deg);
+}
+.burger-menu_nav{
+  padding-top: 80px;
+  position: fixed;
+  z-index: 20;
+  display: flex;
+  flex-flow: column;
+  height: 100ch;
+  background-color: rgba(51, 51, 51, 0.7);
+  overflow-y: auto;
+  left: 60%;
+
+}
+.burger-menu_active .burger-menu_nav {
+  left: 0;
+}
+.nav_li_a{
+  font-size: 32px;
+  padding: 30px;
+}
